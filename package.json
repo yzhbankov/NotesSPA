@@ -1,0 +1,38 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server/server.js --presets es2015,stage-2",
+    "build": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "body-parser": "^1.17.1",
+    "events": "^1.1.1",
+    "express": "^4.15.2",
+    "flux": "^3.1.2",
+    "keymirror": "^0.1.1",
+    "mongoose": "^4.9.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-masonry-component": "^5.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "css-loader": "^0.28.0",
+    "json-loader": "^0.5.4",
+    "less-loader": "^4.0.3",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.2"
+  }
+}
