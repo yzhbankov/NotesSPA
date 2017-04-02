@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
 import ejs from 'ejs';
 
 import { serverPort } from '../etc/config.json';
@@ -19,6 +20,10 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
     return next();
 });
+app.use(express.static(path.join(__dirname, 'public')));
+app.engine('.html', ejs.__express);
+app.set('views', __dirname + '/public');
+app.set('view engine', 'html');
 
 app.use('/', router);
 
