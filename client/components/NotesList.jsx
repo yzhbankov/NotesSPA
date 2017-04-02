@@ -3,6 +3,7 @@ import React from 'react';
 import Note from './Note.jsx';
 import Masonry from 'react-masonry-component';
 
+import './style/NotesList.less';
 
 const NotesList = React.createClass({
     render(){
@@ -13,10 +14,11 @@ const NotesList = React.createClass({
             isFitWidth: true
         };
         return (
-            <Masonry
-                options={masonryOptions}>
-                <h1>Hello iam a list</h1>
-                {this.props.notes.map(note=>
+            <div>
+                <h1 className="NotesListTitle">My notes</h1>
+                <Masonry
+                    options={masonryOptions}>
+                    {this.props.notes.map(note =>
                         <Note
                             key={note.id}
                             title={note.title}
@@ -24,8 +26,9 @@ const NotesList = React.createClass({
                             onDelete={this.props.noteDelete.bind(null, note)}
                             text={note.text}>
                         </Note>
-                )}
-            </Masonry>
+                    )}
+                </Masonry>
+            </div>
         )
     }
 });

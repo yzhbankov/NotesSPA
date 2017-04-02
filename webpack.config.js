@@ -16,12 +16,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader!autoprefixer-loader",
+                loader: "style-loader!style-loader!autoprefixer-loader",
                 exclude: [/node_modules/, /public/]
             },
             {
                 test: /\.less$/,
-                loader: "style-loader!css-loader!autoprefixer-loader!less-loader",
+                loader: "style-loader!style-loader!autoprefixer-loader!less-loader",
                 exclude: [/node_modules/, /public/]
             },
             {

@@ -2,6 +2,8 @@ import React from 'react';
 
 import NoteActions from '../actions/NotesActions.js';
 
+import './style/NoteEditor.less';
+
 const NoteEditor = React.createClass({
     getInitialState(){
         return {
@@ -41,18 +43,23 @@ const NoteEditor = React.createClass({
     },
     render(){
         return (
-            <div>
-                <input
-                    type='text'
-                    placeholder='Enter title'
-                    value={this.state.title}
-                    onChange={this.handleTitleChange}></input>
-                <input
-                    type='text'
-                    placeholder='Enter text'
-                    value={this.state.text}
-                    onChange={this.handleTextChange}></input>
-
+            <div className="NoteEditor">
+                <div>
+                    <input
+                        className="NoteEditorTitle"
+                        type='text'
+                        placeholder='Enter title'
+                        value={this.state.title}
+                        onChange={this.handleTitleChange}></input>
+                </div>
+                <div>
+                    <input
+                        className="NoteEditorText"
+                        type='text'
+                        placeholder='Enter text'
+                        value={this.state.text}
+                        onChange={this.handleTextChange}></input>
+                </div>
                 <div className='NoteEditorColor'>
                     <div
                         className='colorPicker NoteEditorColorWhite'
@@ -83,7 +90,8 @@ const NoteEditor = React.createClass({
 
                 <div>
                     <button
-                        disabled={(!this.state.text)||(!this.state.title)}
+                        className="NoteEditorBtn"
+                        disabled={(!this.state.text) || (!this.state.title)}
                         onClick={this.handleNoteAdd}>
                         Add
                     </button>

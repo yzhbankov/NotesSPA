@@ -6,6 +6,8 @@ import NotesList from './NotesList.jsx';
 import NotesStore from '../store/NotesStore.js';
 import NotesAction from '../actions/NotesActions.js';
 
+import './style/App.less';
+
 function getStateFromStore() {
     return {
         notes: NotesStore.getNotes(),
@@ -30,13 +32,12 @@ const App = React.createClass({
         NotesAction.createNote(newNote);
     },
     handleNoteDelete(note){
-        console.log(note.id);
         NotesAction.deleteNote(note.id);
     },
     render(){
         return (
             <div>
-                <h1> Notes Editor </h1>
+                <h1 className="AppTitle"> Notes Editor </h1>
                 <NoteEditor noteAdd={this.handleNoteAdd} />
                 <NotesList notes={this.state.notes} noteDelete={this.handleNoteDelete} />
             </div>
