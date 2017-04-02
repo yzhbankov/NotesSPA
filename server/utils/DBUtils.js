@@ -1,13 +1,11 @@
 import mongoose from 'mongoose';
 
-import {dbUrl} from '../../etc/config.json';
-
 import '../models/NoteModel.js';
 
 const Note = mongoose.model('Note');
 
 export function setUpConnection() {
-    mongoose.connect(dbUrl);
+    mongoose.connect("mongodb://yzhbankov:password1360@ds147900.mlab.com:47900/heroku_7mlgjgmk");
 }
 
 export function listNodes() {
