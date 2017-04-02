@@ -18,6 +18,9 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
     return next();
 });
+app.set('views', __dirname + '/public');
+app.engine('html', ejs.renderFile);
+app.set('view engine', 'html');
 
 app.use('/', router);
 
