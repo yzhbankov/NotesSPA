@@ -11555,13 +11555,13 @@ module.exports = function spread(callback) {
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     listNotes() {
-        return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://localhost:8080/notes');
+        return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('https://react-flux-notes-app.herokuapp.com/notes');
     },
     addNote(data) {
-        return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('http://localhost:8080/notes', data);
+        return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('https://react-flux-notes-app.herokuapp.com/notes', data);
     },
     deleteNote(id) {
-        return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('http://localhost:8080/notes/' + id);
+        return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('https://react-flux-notes-app.herokuapp.com/notes/' + id);
     }
 });
 
