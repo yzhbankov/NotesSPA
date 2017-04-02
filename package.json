@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node server/server.js --presets es2015,stage-2",
-    "build": "webpack --watch"
+    "build": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "author": "",
   "license": "ISC",
