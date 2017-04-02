@@ -10,7 +10,7 @@ router.use((req, res, next)=> {
 
 
 router.get('/', (req, res)=> {
-    res.send('Hello');
+    res.sendfile('./public/index.html');
 });
 
 router
