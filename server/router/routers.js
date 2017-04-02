@@ -1,4 +1,6 @@
 import express from 'express';
+import ejs from 'ejs';
+
 import * as db from '../utils/DBUtils.js';
 
 const router = express.Router();
@@ -9,9 +11,12 @@ router.use((req, res, next)=> {
 });
 
 router.use(express.static(__dirname + '/public'));
+router.set('views', __dirname + '/public');
+router.engine('html', ejs.renderFile);
+router.set('view engine', 'html');
 
 router.get('/', (req, res)=> {
-    res.sendfile('public/build/main.bundle.js');
+    res.render('public/index.html');
 });
 
 router
