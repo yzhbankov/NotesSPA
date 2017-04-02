@@ -20,9 +20,6 @@ app.use((req, res, next) => {
     return next();
 });
 
-app.engine('html', ejs.renderFile);
-app.set('view engine', 'html');
-
 app.use('/', router);
 
 const server = app.listen(process.env.PORT || serverPort, () => {
