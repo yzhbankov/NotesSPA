@@ -8,9 +8,10 @@ router.use((req, res, next)=> {
     next();
 });
 
+router.use(express.static(__dirname + '/public'));
 
 router.get('/', (req, res)=> {
-    res.sendfile('./public/index.html');
+    res.sendfile('public/index.html');
 });
 
 router
