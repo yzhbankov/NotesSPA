@@ -6,7 +6,7 @@ import * as db from './utils/DBUtils.js'
 
 import router from './router/routers.js';
 
-//db.setUpConnection();
+db.setUpConnection();
 
 const app = express();
 

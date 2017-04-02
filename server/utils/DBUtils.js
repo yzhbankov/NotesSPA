@@ -5,7 +5,7 @@ import '../models/NoteModel.js';
 const Note = mongoose.model('Note');
 
 export function setUpConnection() {
-    mongoose.connect("mongodb://yzhbankov:password1360@ds147900.mlab.com:47900/heroku_7mlgjgmk");
+    mongoose.connect("mongodb://iaroslav:13606524@ds147900.mlab.com:47900/heroku_7mlgjgmk");
 }
 
 export function listNodes() {
