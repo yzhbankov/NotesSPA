@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import ejs from 'ejs';
 
 import { serverPort } from '../etc/config.json';
 import * as db from './utils/DBUtils.js'

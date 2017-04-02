@@ -1,5 +1,4 @@
 import express from 'express';
-import ejs from 'ejs';
 
 import * as db from '../utils/DBUtils.js';
 
