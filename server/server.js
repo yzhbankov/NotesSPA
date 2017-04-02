@@ -21,6 +21,6 @@ app.use((req, res, next) => {
 
 app.use('/', router);
 
-const server = app.listen(serverPort, () => {
+const server = app.listen(process.env.PORT || serverPort, () => {
     console.log('Server run in port 8080')
 });

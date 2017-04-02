@@ -1,18 +1,20 @@
 import mongoose from 'mongoose';
 
+import {dbUrl} from '../../etc/config.json';
+
 import '../models/NoteModel.js';
 
 const Note = mongoose.model('Note');
 
-export function setUpConnection(){
-    mongoose.connect('mongodb://localhost:27017/notes');
+export function setUpConnection() {
+    mongoose.connect(dbUrl);
 }
 
-export function listNodes(){
+export function listNodes() {
     return Note.find();
 }
 
-export function addNote(data){
+export function addNote(data) {
     const note = Note({
         title: data.title,
         text: data.text,
@@ -22,6 +24,6 @@ export function addNote(data){
     return note.save();
 }
 
-export function deleteNote(id){
+export function deleteNote(id) {
     return Note.findById(id).remove();
 }
