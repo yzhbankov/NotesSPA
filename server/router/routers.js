@@ -11,7 +11,7 @@ router.use((req, res, next)=> {
 router.use(express.static(__dirname + '/public'));
 
 router.get('/', (req, res)=> {
-    res.sendfile('css/style.css');
+    res.sendfile('public/css/style.css');
 });
 
 router
